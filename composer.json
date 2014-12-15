@@ -1,0 +1,35 @@
+{
+    "name": "jadb/groovehq"
+    , "description": "GrooveHQ SDK for PHP5"
+    , "keywords": ["groovehq", "sdk"]
+    , "type": "library"
+    , "license": "MIT"
+    , "authors": [
+        {
+            "name": "Jad Bitar"
+            , "email": "jadbitar@mac.com"
+            , "homepage": "http://jadb.io"
+        }
+    ]
+    , "require": {
+        "cakephp/utility": "master-dev"
+        , "guzzlehttp/guzzle": "4.*"
+        , "guzzlehttp/guzzle-services": "0.3.*"
+        , "sabre/xml" : "master-dev"
+    }
+    , "require-dev": {
+        "phpunit/phpunit": "4.*"
+        , "mockery/mockery": "0.*"
+    }
+    , "autoload": {
+        "psr-4": {
+            "GrooveHQ\\": "src/"
+        }
+    }
+    , "autoload-dev": {
+        "psr-4": {
+            "GrooveHQ\\Test\\": "tests/"
+        }
+    }
+    , "minimum-stability": "dev"
+}
