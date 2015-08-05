@@ -12,10 +12,10 @@
         }
     ]
     , "require": {
-        "cakephp/utility": "master-dev"
+        "cakephp/utility": "dev-master"
         , "guzzlehttp/guzzle": "4.*"
         , "guzzlehttp/guzzle-services": "0.3.*"
-        , "sabre/xml" : "master-dev"
+        , "sabre/xml" : "dev-master"
     }
     , "require-dev": {
         "phpunit/phpunit": "4.*"
