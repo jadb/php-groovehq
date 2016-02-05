@@ -13,7 +13,7 @@ class MessagesDescriptionTest extends \PHPUnit_Framework_TestCase
 
         $operations = $messages->getOperations();
 
-        $expected = ['list', 'find', 'create'];
+        $expected = ['list', 'find', 'create', 'attachments'];
         $result = array_keys($operations);
         $this->assertEquals($expected, $result);
 
@@ -27,6 +27,10 @@ class MessagesDescriptionTest extends \PHPUnit_Framework_TestCase
 
         $expected = ['ticket_number', 'body', 'note', 'access_token'];
         $result = array_keys($operations['create']['parameters']);
+        $this->assertEquals($expected, $result);
+
+        $expected = ['message', 'access_token'];
+        $result = array_keys($operations['attachments']['parameters']);
         $this->assertEquals($expected, $result);
     }
 

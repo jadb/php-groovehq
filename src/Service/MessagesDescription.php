@@ -71,6 +71,19 @@ class MessagesDescription extends BasicServiceDescription
                         ],
                     ]
                 ],
+                'attachments' => [
+                    'summary' => 'Listing attachments',
+                    'httpMethod' => 'GET',
+                    'uri' => '/attachments',
+                    'parameters' => [
+                        'message' => [
+                            'description' => 'The ID of the message to list attachments for',
+                            'type' => 'string',
+                            'required' => true,
+                            'location' => 'query'
+                        ],
+                    ],
+                ],
             ]
         ];
     }
