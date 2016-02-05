@@ -111,10 +111,35 @@ class TicketsDescription extends BasicServiceDescription
                         ],
                     ],
                 ],
+                'count' => [
+                    'summary' => 'Listing ticket counts',
+                    'httpMethod' => 'GET',
+                    'uri' => 'tickets/count',
+                    'parameters' => [
+                        'mailbox' => [
+                            'description' => 'The email or ID of a mailbox to filter by',
+                            'type' => 'string',
+                            'required' => false,
+                            'location' => 'query',
+                        ],
+                    ],
+                ],
                 'find' => [
                     'summary' => 'Finding one ticket',
                     'httpMethod' => 'GET',
                     'uri' => '/tickets/{ticket_number}',
+                    'parameters' => [
+                        'ticket_number' => [
+                            'description' => 'The ticket number',
+                            'type' => 'number',
+                            'location' => 'uri',
+                        ],
+                    ]
+                ],
+                'assignee' => [
+                    'summary' => 'Finding a ticket\'s assignee',
+                    'httpMethod' => 'GET',
+                    'uri' => '/tickets/{ticket_number}/assignee',
                     'parameters' => [
                         'ticket_number' => [
                             'description' => 'The ticket number',

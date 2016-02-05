@@ -13,7 +13,7 @@ class TicketsDescriptionTest extends \PHPUnit_Framework_TestCase
 
         $operations = $tickets->getOperations();
 
-        $expected = ['create', 'list', 'find', 'state', 'update'];
+        $expected = ['create', 'list', 'count', 'find', 'assignee', 'state', 'update'];
         $result = array_keys($operations);
         $this->assertEquals($expected, $result);
 
@@ -25,8 +25,16 @@ class TicketsDescriptionTest extends \PHPUnit_Framework_TestCase
         $result = array_keys($operations['list']['parameters']);
         $this->assertEquals($expected, $result);
 
+        $expected = ['mailbox', 'access_token'];
+        $result = array_keys($operations['count']['parameters']);
+        $this->assertEquals($expected, $result);
+
         $expected = ['ticket_number', 'access_token'];
         $result = array_keys($operations['find']['parameters']);
+        $this->assertEquals($expected, $result);
+
+        $expected = ['ticket_number', 'access_token'];
+        $result = array_keys($operations['assignee']['parameters']);
         $this->assertEquals($expected, $result);
 
         $expected = ['ticket_number', 'access_token'];
