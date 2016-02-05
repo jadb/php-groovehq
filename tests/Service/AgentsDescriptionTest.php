@@ -13,8 +13,12 @@ class AgentsDescriptionTest extends \PHPUnit_Framework_TestCase
 
         $operations = $agents->getOperations();
 
-        $expected = ['find'];
+        $expected = ['list', 'find'];
         $result = array_keys($operations);
+        $this->assertEquals($expected, $result);
+
+        $expected = ['group', 'access_token'];
+        $result = array_keys($operations['list']['parameters']);
         $this->assertEquals($expected, $result);
 
         $expected = ['agent_email', 'access_token'];

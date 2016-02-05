@@ -9,6 +9,19 @@ class AgentsDescription extends BasicServiceDescription
     {
         return [
             'operations' => [
+                'list' => [
+                    'summary' => 'Listing agents',
+                    'httpMethod' => 'GET',
+                    'uri' => '/agents',
+                    'parameters' => [
+                        'group' => [
+                            'description' => 'The ID of a Group to filter by',
+                            'type' => 'string',
+                            'required' => false,
+                            'location' => 'query'
+                        ]
+                    ],
+                ],
                 'find' => [
                     'summary' => 'Finding one agent',
                     'httpMethod' => 'GET',
