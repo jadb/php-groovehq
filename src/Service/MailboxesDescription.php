@@ -18,7 +18,7 @@ class MailboxesDescription extends BasicServiceDescription
                 'folders' => [
                     'summary' => 'Listing mailboxes',
                     'httpMethod' => 'GET',
-                    'uri' => '/mailboxes',
+                    'uri' => '/folders',
                     'parameters' => [
                         'mailbox' => [
                             'description' => 'The ID or email address of a Mailbox to filter by',
